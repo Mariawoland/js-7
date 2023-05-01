@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS 6</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-size: 23px;
+            font-family: calibri;
+            color: rgb(121, 44, 209);
+            font-weight: 600;
+            background-color: rgb(200, 164, 233);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 95vh;
+            gap: 20px;
+            text-align: center;
+        }
+
+        #gilaki {
+            width: 250px;
+            height: 80px;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            background-color: rgb(255, 176, 248);
+            border: 3px solid rgb(121, 44, 209);
+            color: rgb(121, 44, 209);
+            font-weight: 600;
+        }
+
+        #shedegi {
+            letter-spacing: 0.2rem;
+            font-size: 24px;
+            word-break: break-word;
+            padding: 5px 40px;
+            line-height: 170%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>დააჭირეთ რომ გაიგოთ უარყოფითი რიცხვები მასივიდან.</p>
+
+    <button id="gilaki" onclick="uaryopiti()">დააჭირე</button>
+
+    <p id="shedegi"></p>
+
+    <script>
+
+        function uaryopiti() {
+
+            let teqsti = "";
+            let rigi = 0;
+            let masivi = [1, 2, -9, -56, 34, 77, -90, -11, -1, -2, -5, -9];
+
+            while (rigi < masivi.length) {
+
+
+                let ricxvi = masivi[rigi];
+
+                if (ricxvi < 0) {
+
+                    teqsti += '<span style=" color: transparent">_</span>' + ricxvi + '<span style=" color: transparent">_</span>';
+                }
+                rigi++;
+            }
+
+            document.getElementById("shedegi").innerHTML = teqsti;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
